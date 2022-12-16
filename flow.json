@@ -1,1 +1,74 @@
-[]
+[
+    {
+        "id": "e19203f49e87451d",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8f13bdc98c355aa9",
+        "type": "inject",
+        "z": "e19203f49e87451d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 200,
+        "wires": [
+            [
+                "cb1ecf98857b7a2c"
+            ]
+        ]
+    },
+    {
+        "id": "bd18563ef1ab869a",
+        "type": "debug",
+        "z": "e19203f49e87451d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "cb1ecf98857b7a2c",
+        "type": "function",
+        "z": "e19203f49e87451d",
+        "name": "function 1",
+        "func": "msg.payload = \"Hello World!\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "bd18563ef1ab869a"
+            ]
+        ]
+    }
+]
