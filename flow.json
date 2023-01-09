@@ -28,16 +28,40 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 280,
-        "y": 200,
+        "x": 200,
+        "y": 500,
         "wires": [
             [
-                "cb1ecf98857b7a2c"
+                "23a3f852652d8091"
             ]
         ]
     },
     {
-        "id": "bd18563ef1ab869a",
+        "id": "23a3f852652d8091",
+        "type": "http request",
+        "z": "e19203f49e87451d",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 500,
+        "wires": [
+            [
+                "74564ece4286d9f0"
+            ]
+        ]
+    },
+    {
+        "id": "bfe6f7c3ec5eb357",
         "type": "debug",
         "z": "e19203f49e87451d",
         "name": "debug 1",
@@ -49,25 +73,22 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 700,
-        "y": 200,
+        "y": 500,
         "wires": []
     },
     {
-        "id": "cb1ecf98857b7a2c",
-        "type": "function",
+        "id": "74564ece4286d9f0",
+        "type": "json",
         "z": "e19203f49e87451d",
-        "name": "function 1",
-        "func": "msg.payload = \"Hello World!!\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 500,
-        "y": 200,
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 550,
+        "y": 500,
         "wires": [
             [
-                "bd18563ef1ab869a"
+                "bfe6f7c3ec5eb357"
             ]
         ]
     }
